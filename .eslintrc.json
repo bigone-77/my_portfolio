@@ -1,3 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-empty-pattern": 2,
+    "no-case-declarations": 2,
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "curly": ["error", "all"]
+  }
 }
