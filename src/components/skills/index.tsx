@@ -1,3 +1,3 @@
 export default function SkillDiv() {
-  return <div id='skills' className='h-80 bg-zinc-300'></div>;
+  return <div className='w-screen h-lvh bg-zinc-300'></div>;
 }

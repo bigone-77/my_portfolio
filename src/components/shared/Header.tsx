@@ -1,31 +1,39 @@
-'use client';
+import { NavMenu } from '@/constants/NavMenu';
 
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+interface HeaderProps {
+  selectedIndex: number;
+  navigateToSlide: (index: number) => void;
+}
 
-export default function Header() {
+export default function Header({
+  selectedIndex,
+  navigateToSlide,
+}: HeaderProps) {
   return (
     <header className='px-6 py-10 flex justify-between items-center mx-auto w-full top-0 backdrop-blur-sm sticky z-30'>
       <p
-        className='font-bold text-2xl text-blue-600 font-logo'
-        onClick={() => scroll.scrollToTop()}
+        className='font-bold text-2xl text-blue-600 font-logo cursor-pointer'
+        onClick={() => navigateToSlide(0)}
       >
         Bigone&apos;s Portfolio
       </p>
       <ul className='flex items-center justify-center font-medium gap-x-8 text-xl text-gray-600 cursor-pointer'>
-        {['Preview', 'About', 'Skills', 'Projects', 'Contact'].map(
-          (route, index) => (
-            <li key={index} className='hover:text-blue-600 transition-all'>
-              <ScrollLink
-                to={`${route.toLowerCase()}`}
-                smooth={true}
-                duration={500}
-                offset={-120}
-              >
-                {route}
-              </ScrollLink>
-            </li>
-          ),
-        )}
+        {NavMenu.map((route, index) => (
+          <li
+            key={index}
+            className={`relative hover:text-blue-600 transition-all cursor-pointer ${
+              selectedIndex === index ? 'text-blue-600' : ''
+            }`}
+            onClick={() => navigateToSlide(index)}
+          >
+            {route}
+            <span
+              className={`absolute left-0 right-0 bottom-[-2px] h-[2px] bg-blue-600 transition-transform duration-300 ${
+                selectedIndex === index ? 'scale-x-100' : 'scale-x-0'
+              }`}
+            />
+          </li>
+        ))}
       </ul>
     </header>
   );

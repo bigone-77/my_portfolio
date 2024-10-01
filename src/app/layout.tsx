@@ -2,9 +2,6 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
-import PreviewDiv from '@/components/preview';
-
-import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 
 const logoFont = localFont({
@@ -36,9 +33,7 @@ export default function RootLayout({
       <body
         className={`${pretendard.variable} ${logoFont.variable} font-pretendard`}
       >
-        <PreviewDiv />
-        <Header />
-        <main className='px-10'>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
