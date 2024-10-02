@@ -20,7 +20,7 @@ export default function SideEmail() {
           </svg>
           <a
             href='mailto:taeill012@gmail.com'
-            className='text-base tracking-widest'
+            className='font-logo tracking-widest'
           >
             taeill012@gmail.com
           </a>

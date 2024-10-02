@@ -15,7 +15,7 @@ import {
 
 export default function AboutDiv() {
   return (
-    <Top title='About'>
+    <Top sequence={1} title='About'>
       <section className='grid grid-cols-3'>
         <div className='col-span-1 place-items-start'>
           <Image

@@ -67,3 +67,17 @@
     @apply bg-background;
   }
 }
+
+.swiper-pagination {
+  text-align: center !important;
+  padding-bottom: 10%;
+}
+
+.swiper-pagination-bullet {
+  background: rgb(220, 216, 216) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2696ec !important;
+}

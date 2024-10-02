@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, Pagination } from 'swiper/modules';
+
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 import Header from '@/components/shared/Header';
 
@@ -33,7 +35,10 @@ export default function HomeView() {
         slidesPerView={1}
         mousewheel={true}
         speed={1000}
-        modules={[Mousewheel]}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Mousewheel, Pagination]}
         onSwiper={(swiper) => setSwiperInstance(swiper)}
         onSlideChange={(swiper) => setSelectedIndex(swiper.activeIndex)}
         className='w-full h-screen'
