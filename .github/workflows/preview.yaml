@@ -1,4 +1,4 @@
-name: Vercel Production Deployment
+name: GitHub Actions Vercel Preview Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -7,30 +7,15 @@ on:
     branches:
       - main
 jobs:
-  Deploy-Production:
+  Deploy-Preview:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      # Enable Corepack for Yarn v4.x
-      - name: Enable Corepack
-        run: corepack enable
-
-      # Prepare the Yarn version specified in package.json
-      - name: Set Yarn Version
-        run: corepack prepare yarn@4.5.0 --activate
-
+      - uses: actions/checkout@v3
       - name: Install Vercel CLI
-        run: yarn global add vercel@latest
-
+        run: npm install --global vercel@canary
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Install Dependencies
-        run: yarn install
-
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
       - name: Build Project Artifacts
-        run: yarn vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
-        run: yarn vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
