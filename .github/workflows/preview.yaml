@@ -11,11 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      # Enable Corepack for Yarn v4.x
+      - name: Enable Corepack
+        run: corepack enable
+
+      # Prepare the Yarn version specified in package.json
+      - name: Set Yarn Version
+        run: corepack prepare yarn@4.5.0 --activate
+
       - name: Install Vercel CLI
-        run: npm install --global vercel@latest
+        run: yarn global add vercel@latest
+
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Install Dependencies
+        run: yarn install
+
       - name: Build Project Artifacts
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: yarn vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: yarn vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
