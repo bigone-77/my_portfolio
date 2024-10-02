@@ -1,1 +1,1 @@
-export const NavMenu = ['Preview', 'About', 'Skills', 'Projects', 'Contact'];
+export const NavMenu = ['About', 'Skills', 'Projects', 'Contact'];
