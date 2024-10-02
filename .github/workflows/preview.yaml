@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Enable Corepack
+        run: corepack enable
+      - name: Set Yarn Version
+        run: corepack prepare yarn@4.5.0 --activate
       - name: Install Vercel CLI
         run: yarn global add vercel@canary
       - name: Pull Vercel Environment Information
