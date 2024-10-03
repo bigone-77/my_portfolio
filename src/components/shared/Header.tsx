@@ -11,7 +11,7 @@ export default function Header({
 }: HeaderProps) {
   return (
     <header
-      className={`${!selectedIndex && 'bg-zinc-800'} px-6 py-8 flex justify-between items-center mx-auto w-full top-0 backdrop-blur-sm sticky z-30 shadow-lg shadow-gray-500/50`}
+      className={`${!selectedIndex && 'bg-zinc-800'} px-6 py-8 flex justify-between items-center mx-auto w-full top-0 backdrop-blur-sm fixed z-30 shadow-lg shadow-gray-500/50`}
     >
       <p
         className={`${!selectedIndex && 'text-zinc-400'} font-bold text-2xl text-blue-600 font-logo cursor-pointer`}

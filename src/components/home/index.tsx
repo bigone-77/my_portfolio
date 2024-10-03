@@ -14,6 +14,9 @@ import AboutDiv from '@/components/home/about';
 import SkillDiv from '@/components/home/skills';
 import ProjectDiv from '@/components/home/projects';
 import ContactDiv from '@/components/home/contact';
+import Footer from '@/components/shared/Footer';
+import SideSocial from '@/components/shared/SideSocial';
+import SideEmail from '@/components/shared/SideEmail';
 
 export default function HomeView() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
@@ -27,11 +30,10 @@ export default function HomeView() {
   };
 
   return (
-    <main className='m-0'>
+    <main className='relative w-full h-full'>
       <Header selectedIndex={selectedIndex} navigateToSlide={navigateToSlide} />
       <Swiper
         direction='vertical'
-        spaceBetween={30}
         slidesPerView={1}
         mousewheel={true}
         speed={1000}
@@ -43,7 +45,7 @@ export default function HomeView() {
         onSlideChange={(swiper) => setSelectedIndex(swiper.activeIndex)}
         className='w-full h-screen'
       >
-        <SwiperSlide>
+        <SwiperSlide className='w-full h-full'>
           <PreviewDiv />
         </SwiperSlide>
         <SwiperSlide>
@@ -57,8 +59,11 @@ export default function HomeView() {
         </SwiperSlide>
         <SwiperSlide>
           <ContactDiv />
+          <Footer />
         </SwiperSlide>
       </Swiper>
+      <SideSocial />
+      <SideEmail />
     </main>
   );
 }

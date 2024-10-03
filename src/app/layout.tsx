@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
-import Footer from '@/components/shared/Footer';
-
 const logoFont = localFont({
   src: './fonts/런드리고딕 Regular.woff2',
   display: 'swap',
@@ -31,10 +29,9 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body
-        className={`${pretendard.variable} ${logoFont.variable} font-pretendard`}
+        className={`${pretendard.variable} ${logoFont.variable} font-pretendard m-0 h-full w-screen`}
       >
         {children}
-        <Footer />
       </body>
     </html>
   );

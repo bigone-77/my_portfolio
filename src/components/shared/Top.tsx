@@ -15,11 +15,9 @@ export default function Top({
 }: ITopProps) {
   return (
     <div
-      className='w-screen h-full px-32 pt-4 pb-10'
+      className='w-screen h-lvh px-32 pt-28 pb-6'
       style={{ backgroundColor: bgColor, color: textColor }}
     >
       <p className='font-bold font-logo mb-6 text-3xl text-blue-600'>{`${sequence}. ${title}`}</p>
       {children}
-    </div>
-  );
-}
+    </

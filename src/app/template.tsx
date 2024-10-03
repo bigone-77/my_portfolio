@@ -1,7 +1,5 @@
 'use client';
 
-import SideEmail from '@/components/shared/SideEmail';
-import SideSocial from '@/components/shared/SideSocial';
 import { motion } from 'framer-motion';
 
 export default function Template({ children }: { children: React.ReactNode }) {
@@ -12,8 +10,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
       transition={{ ease: 'easeInOut', duration: 0.75 }}
     >
       {children}
-      <SideSocial />
-      <SideEmail />
     </motion.div>
   );
 }

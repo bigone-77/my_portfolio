@@ -47,9 +47,3 @@ export default function HoverText({
           <p className='text-sm font-medium'>{name}</p>
         </HoverCardTrigger>
       </div>
-      <HoverCardContent className='font-medium text-sm rounded-xl'>
-        {description}
-      </HoverCardContent>
-    </HoverCard>
-  );
-}

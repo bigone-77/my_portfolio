@@ -2,7 +2,7 @@ import HomeView from '@/components/home';
 
 export default function HomePage() {
   return (
-    <main>
+    <main className='w-screen h-full'>
       <HomeView />
     </main>
   );
