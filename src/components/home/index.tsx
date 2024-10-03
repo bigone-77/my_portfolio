@@ -27,7 +27,7 @@ export default function HomeView() {
   };
 
   return (
-    <main>
+    <main className='m-0'>
       <Header selectedIndex={selectedIndex} navigateToSlide={navigateToSlide} />
       <Swiper
         direction='vertical'

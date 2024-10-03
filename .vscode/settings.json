@@ -3,14 +3,21 @@
     "bigone",
     "bigone's",
     "clsx",
+    "familier",
     "Fullpage",
     "lucide",
+    "nextdotjs",
     "notionhq",
+    "Postgre",
     "Pretendard",
+    "reactquery",
+    "shadcn",
     "shinyongjun",
     "Swiper",
+    "Swit",
     "taeill",
-    "tailwindcss"
+    "tailwindcss",
+    "Tanstack"
   ],
   "search.exclude": {
     "**/.yarn": true,
