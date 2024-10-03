@@ -20,4 +20,6 @@ export default function Top({
     >
       <p className='font-bold font-logo mb-6 text-3xl text-blue-600'>{`${sequence}. ${title}`}</p>
       {children}
-    </
+    </div>
+  );
+}

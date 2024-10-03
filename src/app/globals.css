@@ -80,4 +80,10 @@
 }
 
 .swiper-pagination-bullet {
-  background: rgb(220, 216, 216) 
+  background: rgb(220, 216, 216) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2696ec !important;
+}
