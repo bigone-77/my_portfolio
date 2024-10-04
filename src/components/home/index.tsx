@@ -24,7 +24,6 @@ export default function HomeView() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  // 슬라이드를 이동시키는 핸들러(네비게이션)
   const navigateToSlide = (index: number) => {
     if (swiperInstance) {
       swiperInstance.slideTo(index);
