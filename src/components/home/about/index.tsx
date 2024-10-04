@@ -15,7 +15,10 @@ import {
 
 export default function AboutDiv() {
   return (
-    <Top sequence={1} title='About'>
+    <Top>
+      <p className='text-start font-bold font-logo mb-6 text-3xl text-blue-600'>
+        1. About
+      </p>
       <section className='grid grid-cols-3'>
         <div className='col-span-1 place-items-start'>
           <Image

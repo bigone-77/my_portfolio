@@ -2,12 +2,15 @@ import Top from '@/components/shared/Top';
 
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 
-import { Skills } from '@/constants/Skills';
+import { Skills } from '@/data/Skills';
 import HoverText from '@/components/home/skills/HoverCard';
 
 export default function SkillDiv() {
   return (
-    <Top sequence={2} title='Skills' bgColor='#FFF5CD' textColor='#E78F81'>
+    <Top bgColor='#FFF5CD' textColor='#E78F81'>
+      <p className='text-start font-bold font-logo mb-6 text-3xl text-zinc-600'>
+        2. Skills
+      </p>
       <div className='grid grid-cols-2 gap-4'>
         <section className='flex flex-col gap-2'>
           <Card className='p-4'>
@@ -41,7 +44,7 @@ export default function SkillDiv() {
             </CardContent>
           </Card>
         </section>
-        <section className='flex flex-col gap-2 -translate-y-12'>
+        <section className='flex flex-col gap-2'>
           <Card className='p-4'>
             <CardTitle className='mb-2 font-logo'>{Skills[1].name}</CardTitle>
             <CardContent className='grid grid-cols-2 items-center gap-2 p-2'>
@@ -73,32 +76,6 @@ export default function SkillDiv() {
             </CardContent>
           </Card>
         </section>
-        {/* <Card
-          key={index}
-          className={`p-4 ${
-            d.contents.length > 6
-              ? 'h-[400px]'
-              : d.contents.length > 4
-                ? 'h-80'
-                : d.contents.length > 2
-                  ? 'h-60'
-                  : 'h-36'
-          }`}
-        >
-          <CardTitle className='mb-2 font-logo'>{d.name}</CardTitle>
-          <CardContent className='grid grid-cols-2 items-center gap-2 p-2'>
-            {d.contents.map((e, idx) => (
-              <HoverText
-                key={idx}
-                color={e.color}
-                imageSrc={e.imageSrc}
-                name={e.name}
-                description={e.description}
-                familier={e.familier}
-              />
-            ))}
-          </CardContent>
-        </Card> */}
       </div>
     </Top>
   );

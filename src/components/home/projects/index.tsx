@@ -1,3 +1,14 @@
+import PostList from '@/components/home/projects/PostList';
+
+import Top from '@/components/shared/Top';
+
 export default function ProjectDiv() {
-  return <div className='w-screen h-lvh bg-orange-300'></div>;
+  return (
+    <Top bgColor='#B7B7B7' textColor='black'>
+      <p className='text-start font-bold font-logo mb-6 text-3xl text-[#705C53]'>
+        3. Projects
+      </p>
+      <PostList />
+    </Top>
+  );
 }

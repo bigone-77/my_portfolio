@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
+import 'react-notion-x/src/styles.css';
+import { AlertContextProvider } from '@/components/commons/AlertContextProvider';
+
 const logoFont = localFont({
   src: './fonts/런드리고딕 Regular.woff2',
   display: 'swap',
@@ -23,15 +26,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang='ko'>
       <body
         className={`${pretendard.variable} ${logoFont.variable} font-pretendard m-0 h-full w-screen`}
       >
-        {children}
+        <AlertContextProvider>
+          {children}
+          {modal}
+          <div id='root-portal' />
+        </AlertContextProvider>
       </body>
     </html>
   );

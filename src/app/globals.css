@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-items: center !important;
+}
+
+.swiper-pagination {
+  text-align: center !important;
+  padding-bottom: 10%;
+}
+
+.swiper-pagination-bullet {
+  background: rgb(220, 216, 216) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2696ec !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background: url('/right-arrow.svg') no-repeat; /* 파일 경로 수정 */
+  width: 44px !important;
+  height: 44px !important;
+  right: -10px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  cursor: pointer !important;
+}
+
+.swiper-button-prev {
+  background: url('/left-arrow.svg') no-repeat; /* 파일 경로 수정 */
+  width: 44px !important;
+  height: 44px !important;
+  left: -10px !important;
+  background-size: cover !important;
+  background-position: top !important;
+  cursor: pointer !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -30,6 +75,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -56,34 +102,4 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background;
-  }
-}
-
-.swiper-slide {
-  display: flex !important;
-  align-items: center !important;
-  justify-items: center !important;
-}
-
-.swiper-pagination {
-  text-align: center !important;
-  padding-bottom: 10%;
-}
-
-.swiper-pagination-bullet {
-  background: rgb(220, 216, 216) !important;
-  opacity: 1 !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #2696ec !important;
 }
