@@ -163,4 +163,11 @@ export default function PostList() {
             <p>이번 프로젝트는 말이죠</p>
             <p>이번 프로젝트는 말이죠</p>
             <p>이번 프로젝트는 말이죠</p>
-            <p>이번 프로젝트는 
+            <p>이번 프로젝트는 말이죠</p>
+            <p>이번 프로젝트는 말이죠</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  );
+}
