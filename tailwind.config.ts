@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '450px',
+        md: '640px',
+      },
       fontFamily: {
         pretendard: ['var(--font-pretendard)'],
         logo: ['var(--font-logo)'],

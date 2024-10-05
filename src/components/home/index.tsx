@@ -18,7 +18,7 @@ import PreviewDiv from '@/components/home/preview';
 import AboutDiv from '@/components/home/about';
 import SkillDiv from '@/components/home/skills';
 import ProjectDiv from '@/components/home/projects';
-import ContactDiv from '@/components/home/contact';
+import ExperienceDiv from '@/components/home/experience';
 
 export default function HomeView() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
@@ -67,7 +67,7 @@ export default function HomeView() {
             <ProjectDiv />
           </SwiperSlide>
           <SwiperSlide>
-            <ContactDiv />
+            <ExperienceDiv />
           </SwiperSlide>
         </Swiper>
         <SideSocial />

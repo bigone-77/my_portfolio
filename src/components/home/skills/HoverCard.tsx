@@ -30,7 +30,7 @@ export default function HoverText({
     <HoverCard key={name}>
       <div className='relative'>
         {isHovered && (
-          <p className='font-logo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none'>
+          <p className='font-logo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none whitespace-nowrap text-center'>
             {familier}
           </p>
         )}
@@ -43,8 +43,14 @@ export default function HoverText({
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <Image src={imageSrc} alt='alt-image' width={40} height={40} />
-          <p className='text-sm font-medium'>{name}</p>
+          <Image
+            src={imageSrc}
+            alt='alt-image'
+            width={40}
+            height={40}
+            className='w-6 h-6 sm:w-10 sm:h-10'
+          />
+          <p className='text-xs sm:text-sm text-center font-medium'>{name}</p>
         </HoverCardTrigger>
       </div>
       <HoverCardContent className='font-medium text-sm rounded-xl'>

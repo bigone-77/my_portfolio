@@ -1,4 +1,4 @@
-import { NavMenu } from '@/constants/NavMenu';
+import { NavMenu } from '@/data/NavMenu';
 
 interface HeaderProps {
   selectedIndex: number;
@@ -19,7 +19,8 @@ export default function Header({
       >
         Bigone&apos;s Portfolio
       </p>
-      <ul className='flex items-center justify-center font-medium gap-x-8 text-xl text-gray-600 cursor-pointer'>
+      <ul className='hidden md:flex items-center justify-center font-medium gap-x-8 text-xl text-gray-600 cursor-pointer'>
+        {/* 추후 반응형 구현 예정 */}
         {NavMenu.map((route, index) => (
           <li
             key={index}

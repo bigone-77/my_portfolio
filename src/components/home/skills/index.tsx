@@ -2,7 +2,7 @@ import Top from '@/components/shared/Top';
 
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 
-import { Skills } from '@/data/Skills';
+import { SkillsData as Skills } from '@/data/Skills';
 import HoverText from '@/components/home/skills/HoverCard';
 
 export default function SkillDiv() {

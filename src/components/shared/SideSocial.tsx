@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function SideSocial() {
   return (
-    <div className='fixed bottom-0 left-[30px] z-20 w-[30px]'>
+    <div className='fixed bottom-0 left-[30px] z-20 w-[30px] hidden sm:block'>
       <div className='flex flex-col items-center gap-4'>
         <div className='flex items-center gap-2 vertical-rl'>
           <Link href='https://github.com/bigone-77'>

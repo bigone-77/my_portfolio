@@ -1,6 +1,6 @@
 export default function SideEmail() {
   return (
-    <div className='fixed bottom-0 right-12 z-20 w-[20px] max-sm:hidden'>
+    <div className='fixed bottom-0 right-12 z-20 w-[20px] hidden sm:block'>
       <div className='flex flex-col items-center gap-4'>
         <div className='flex items-center gap-1 vertical-rl transition-all hover:-translate-y-2'>
           <svg

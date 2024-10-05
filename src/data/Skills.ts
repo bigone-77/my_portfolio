@@ -21,20 +21,9 @@ import SwitSrc from '@logo/swit.svg';
 import DiscordSrc from '@logo/discord.svg';
 import NotionSrc from '@logo/notion.svg';
 
-type Content = {
-  name: string;
-  imageSrc: any;
-  color?: string;
-  description: string;
-  familier: '익숙해요' | '써봤어요';
-};
+import { ISkillsProps } from '@/models/skills';
 
-interface ISkillsProps {
-  name: string;
-  contents: Content[];
-}
-
-export const Skills: ISkillsProps[] = [
+export const SkillsData: ISkillsProps[] = [
   {
     name: 'Language',
     contents: [
@@ -58,10 +47,10 @@ export const Skills: ISkillsProps[] = [
   },
 
   {
-    name: 'BackEnd & DB',
+    name: 'BackEnd\n& DB',
     contents: [
       {
-        name: 'PostgreSQL',
+        name: 'Postgre\nSQL',
         imageSrc: PostgreSrc,
         color: '#4169E1',
         description:
@@ -120,7 +109,7 @@ export const Skills: ISkillsProps[] = [
         familier: '익숙해요',
       },
       {
-        name: 'TailwindCSS',
+        name: 'Tailwind\nCSS',
         imageSrc: TailSrc,
         color: '#06B6D4',
         description:
@@ -128,7 +117,7 @@ export const Skills: ISkillsProps[] = [
         familier: '익숙해요',
       },
       {
-        name: 'TanstackQuery',
+        name: 'Tanstack\nQuery',
         imageSrc: TanSrc,
         color: '#FF4154',
         description:
@@ -136,7 +125,7 @@ export const Skills: ISkillsProps[] = [
         familier: '익숙해요',
       },
       {
-        name: 'Redux Toolkit',
+        name: 'Redux\nToolkit',
         imageSrc: ReduxSrc,
         color: '#764ABC',
         description:
@@ -201,5 +190,3 @@ export const Skills: ISkillsProps[] = [
         familier: '익숙해요',
       },
     ],
-  },
-];

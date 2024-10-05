@@ -27,7 +27,7 @@ export default function AboutDiv() {
             width={200}
             height={300}
             priority
-            className='rounded-md'
+            className='rounded-lg'
           />
           <p className='my-4 font-bold text-4xl'>신태일(Bigone)</p>
           {['긍정적', '침착함', '자신감'].map((keyword, index) => (
