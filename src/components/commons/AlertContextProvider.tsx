@@ -17,6 +17,7 @@ type AlertOptions = Omit<AlertProps, 'open'>;
 
 interface AlertContextValue {
   open: (options: AlertOptions) => void;
+  close: () => void; // close 메서드 추가
 }
 
 const Context = createContext<AlertContextValue | undefined>(undefined);
@@ -36,7 +37,6 @@ export function AlertContextProvider({
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
-    // 포털 루트를 클라이언트 측에서 설정
     const $portal_root = document.getElementById('root-portal');
     setPortalRoot($portal_root);
   }, []);
@@ -59,7 +59,8 @@ export function AlertContextProvider({
     [close],
   );
 
-  const values = useMemo(() => ({ open }), [open]);
+  // `close`를 컨텍스트에 추가
+  const values = useMemo(() => ({ open, close }), [open, close]);
 
   return (
     <Context.Provider value={values}>

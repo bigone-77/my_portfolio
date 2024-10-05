@@ -23,7 +23,7 @@ function Alert({
     <Dimmed>
       <div className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-6 box-border max-h-[80vh] overflow-y-auto'>
         {description}
-        <div className='mt-4'>
+        <div className='mt-4 hidden'>
           <button onClick={onButtonClick}>{buttonLabel}</button>
         </div>
       </div>

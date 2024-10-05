@@ -1,5 +1,6 @@
 'use client';
 
+import { useAlertContext } from '@/components/commons/AlertContextProvider';
 import { useRouter } from 'next/navigation';
 
 interface IDimmedProps {
@@ -9,10 +10,13 @@ interface IDimmedProps {
 
 function Dimmed({ children, goBack = false }: IDimmedProps) {
   const router = useRouter();
+  const { close } = useAlertContext(); // 컨텍스트에서 `close` 가져오기
 
   const handleClick = () => {
     if (goBack) {
       router.back();
+    } else {
+      close();
     }
   };
 
