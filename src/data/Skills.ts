@@ -190,3 +190,5 @@ export const SkillsData: ISkillsProps[] = [
         familier: '익숙해요',
       },
     ],
+  },
+];
