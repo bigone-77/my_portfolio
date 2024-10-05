@@ -1,29 +1,5 @@
 {
-  "cSpell.words": [
-    "bigone",
-    "bigone's",
-    "CLOVA",
-    "clsx",
-    "familier",
-    "Fullpage",
-    "katex",
-    "LIVFIT",
-    "lucide",
-    "nextdotjs",
-    "notionhq",
-    "Postgre",
-    "Pretendard",
-    "prismjs",
-    "reactquery",
-    "Sflqjzs",
-    "shadcn",
-    "shinyongjun",
-    "Swiper",
-    "Swit",
-    "taeill",
-    "tailwindcss",
-    "Tanstack"
-  ],
+  "cSpell.words": ["familier", "swiper"],
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true

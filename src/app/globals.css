@@ -31,6 +31,14 @@
   background-color: #2696ec !important;
 }
 
+/* 450px 이하에서는 숨기기 */
+@media (max-width: 450px) {
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    display: none !important;
+  }
+}
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;

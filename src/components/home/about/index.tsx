@@ -29,7 +29,7 @@ export default function AboutDiv() {
             priority
             className='rounded-lg'
           />
-          <p className='my-4 font-bold text-4xl'>신태일(Bigone)</p>
+          <p className='my-4 font-bold text-2xl'>신태일</p>
           {['긍정적', '침착함', '자신감'].map((keyword, index) => (
             <Badge className='bg-blue-600 mr-2' key={index}>
               {keyword}
