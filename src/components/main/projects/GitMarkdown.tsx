@@ -52,7 +52,7 @@ export default function GitMarkdown({ repoName }: { repoName: string }) {
         ></path>
       </svg>
 
-      <div className='prose max-w-none p-4 overflow-y-auto max-h-[80vh] scrollbar-hide'>
+      <div className='prose max-w-none p-4 overflow-y-auto max-h-[80vh] scrollbar-hide w-full'>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{readme}</ReactMarkdown>
       </div>
     </div>

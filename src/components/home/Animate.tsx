@@ -18,7 +18,7 @@ export default function Animate() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center text-center gap-10 relative'>
+    <div className='flex flex-col items-center justify-center text-center gap-2 relative'>
       <TypeAnimation
         key={key}
         deletionSpeed={60}
@@ -45,13 +45,7 @@ export default function Animate() {
         repeat={0}
       />
       {typeEnd && (
-        <div className='absolute -bottom-32 flex flex-col items-center gap-3'>
-          <Button
-            className='bg-white text-gray-700 fade-in-10'
-            onClick={handleReplay}
-          >
-            다시 보기
-          </Button>
+        <div className='absolute -bottom-20 flex flex-col items-center gap-3'>
           <Lottie
             loop
             animationData={ArrowJson}

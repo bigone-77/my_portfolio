@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 import { Badge } from '@/components/ui/badge';
 import { useAlertContext } from '@/components/commons/AlertContextProvider';
-import GitMarkdown from '@/components/home/projects/GitMarkdown';
+import GitMarkdown from '@/components/main/projects/GitMarkdown';
 import { ProjectsData as Projects } from '@/data/Projects';
 
 export default function PostList() {

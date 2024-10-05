@@ -1,4 +1,4 @@
-import PostList from '@/components/home/projects/PostList';
+import PostList from '@/components/main/projects/PostList';
 
 import Top from '@/components/shared/Top';
 

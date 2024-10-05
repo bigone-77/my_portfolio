@@ -19,7 +19,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@logo/*": ["./public/logo/*"]
+      "@logo/*": ["./public/logo/*"],
+      "@awards/*": ["./public/awards/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

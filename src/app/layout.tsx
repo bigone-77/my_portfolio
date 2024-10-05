@@ -4,6 +4,7 @@ import './globals.css';
 
 import 'react-notion-x/src/styles.css';
 import { AlertContextProvider } from '@/components/commons/AlertContextProvider';
+import Header from '@/components/shared/Header';
 
 const logoFont = localFont({
   src: './fonts/런드리고딕 Regular.woff2',
@@ -37,6 +38,7 @@ export default function RootLayout({
         className={`${pretendard.variable} ${logoFont.variable} font-pretendard m-0 h-full w-screen`}
       >
         <AlertContextProvider>
+          <Header />
           {children}
           {modal}
           <div id='root-portal' />

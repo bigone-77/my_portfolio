@@ -1,21 +1,25 @@
 import { NavMenu } from '@/data/NavMenu';
 
 interface HeaderProps {
-  selectedIndex: number;
-  navigateToSlide: (index: number) => void;
+  selectedIndex?: number;
+  navigateToSlide?: (index: number) => void;
 }
 
 export default function Header({
   selectedIndex,
-  navigateToSlide,
+  navigateToSlide = () => {},
 }: HeaderProps) {
   return (
     <header
-      className={`${!selectedIndex && 'bg-zinc-800'} px-6 py-4 md:py-8 flex justify-between items-center mx-auto w-full top-0 backdrop-blur-sm fixed z-30 shadow-lg shadow-gray-500/50`}
+      className={`${
+        !selectedIndex && 'bg-zinc-800'
+      } px-6 py-4 md:py-8 flex justify-between items-center mx-auto w-full top-0 backdrop-blur-sm fixed z-30 shadow-lg shadow-gray-500/50 overflow-x-hidden`}
     >
       <p
-        className={`${!selectedIndex && 'text-zinc-400'} font-bold text-xl md:text-2xl text-blue-600 font-logo cursor-pointer`}
-        onClick={() => navigateToSlide(0)}
+        className={`${
+          !selectedIndex && 'text-zinc-400'
+        } font-bold text-xl md:text-2xl text-blue-600 font-logo cursor-pointer`}
+        // onClick={() => navigateToSlide(0)}
       >
         Bigone&apos;s Portfolio
       </p>
@@ -28,7 +32,7 @@ export default function Header({
               ${selectedIndex === index + 1 ? 'text-blue-600' : ''}
               ${!selectedIndex && 'text-white'}  
               `}
-            onClick={() => navigateToSlide(index + 1)}
+            // onClick={() => navigateToSlide(index + 1)}
           >
             {route}
             <span
