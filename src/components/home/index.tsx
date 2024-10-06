@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 import { useAnimation, motion } from 'framer-motion';
 
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -19,6 +19,7 @@ import PCCPSrc from '@awards/pccp.png';
 
 export default function HomeDiv() {
   const controls = useAnimation();
+  const textControls = useAnimation(); // 새로운 애니메이션 제어를 위한 useAnimation 추가
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,10 +31,16 @@ export default function HomeDiv() {
 
       // Check if the scroll percent exceeds a certain threshold
       if (scrollPercent > 20) {
-        // 20% is an example threshold
         controls.start('visible');
       } else {
         controls.start('hidden');
+      }
+
+      // 추가 텍스트 애니메이션을 위한 스크롤 감지
+      if (scrollPercent > 50) {
+        textControls.start('visible');
+      } else {
+        textControls.start('hidden');
       }
     };
 
@@ -42,7 +49,7 @@ export default function HomeDiv() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [controls]);
+  }, [controls, textControls]);
 
   return (
     <div className='relative w-full h-full'>
@@ -52,19 +59,19 @@ export default function HomeDiv() {
         <div className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
           <Animate />
         </div>
+        </div>
 
         <motion.div
-          className='flex flex-col items-center justify-between gap-2 pt-24'
+          className='flex flex-col md:grid md:grid-cols-2 mx-16 sm:mx-24 items-center md:items-start justify-between gap-12 md:gap-20 h-full'
           animate={controls}
           variants={{
-            hidden: { opacity: 0, y: '-50%' }, // Start from above the viewport
-            visible: { opacity: 1, y: '45%' }, // Move to the center
+            hidden: { opacity: 0, y: '50%' },
+            visible: { opacity: 1, y: '0%' },
           }}
           initial='hidden'
           transition={{ ease: 'backOut', duration: 1.2 }}
         >
-          {/* <motion.div className='flex flex-col items-center justify-between gap-y-10 mx-10 sm:mx-20 md:mx-52'> */}
-          <Card className='cursor-pointer hover:scale-95 transition-all w-fit'>
+          <Card className='w-full cursor-pointer hover:scale-95 transition-all'>
             <CardHeader>
               <CardTitle className='font-logo text-lg md:text-xl'>
                 ⏳ 저는 이런 활동들을 했어요
@@ -95,10 +102,24 @@ export default function HomeDiv() {
               </ul>
             </CardContent>
           </Card>
-          {/* </motion.div> */}
           <FlipCard images={[SWSrc, PCCPSrc]} />
         </motion.div>
-      </div>
+
+        {/* 스크롤하면 나타나는 텍스트 추가 */}
+        <motion.div
+          className='mt-10 sm:mt-16 text-center text-lg md:text-xl'
+          animate={textControls}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial='hidden'
+          transition={{ ease: 'easeOut', duration: 2 }}
+        >
+          <Link href="/main" className='underline underline-offset-8 hover:opacity-80 cursor-pointer transition-all text-white'>
+          👉제가 더 궁금하신가요?
+          </Link>
+        </motion.div>
 
       {/* Add more content to make the page scrollable */}
       <div className='h-80'></div>

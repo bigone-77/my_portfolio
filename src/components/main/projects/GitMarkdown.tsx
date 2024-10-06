@@ -33,7 +33,7 @@ export default function GitMarkdown({ repoName }: { repoName: string }) {
   }
 
   return (
-    <div className='relative'>
+    <div className='relative w-full'>
       {/* 닫기버튼: 최상위 요소에 배치 */}
       <svg
         width='15'
@@ -52,7 +52,7 @@ export default function GitMarkdown({ repoName }: { repoName: string }) {
         ></path>
       </svg>
 
-      <div className='prose max-w-none p-4 overflow-y-auto max-h-[80vh] scrollbar-hide w-full'>
+      <div className='prose p-4 overflow-y-auto max-h-[80vh] scrollbar-hide'>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{readme}</ReactMarkdown>
       </div>
     </div>

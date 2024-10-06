@@ -76,7 +76,7 @@ export default function PostList() {
                 </section>
                 <div className='flex items-center gap-4'>
                   <Badge className='py-2 px-3 text-white bg-slate-600'>
-                    <Link href={project.notionId}>Notion</Link>
+                    <Link href={`main/${project.notionId}`}>Notion</Link>
                   </Badge>
                   <Badge
                     className='py-2 px-3 text-white bg-slate-600 cursor-pointer'
