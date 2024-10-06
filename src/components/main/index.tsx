@@ -23,9 +23,7 @@ import ExperienceDiv from '@/components/main/experience';
 export default function MainView() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
-  const selectedIndex = useAppSelector(
-    (state) => state.swiperReducer.selectedIndex,
-  );
+  const selectedIndex = useAppSelector((state) => state.swiper.selectedIndex);
   const dispatch = useAppDispatch();
 
   useEffect(() => {

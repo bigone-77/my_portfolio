@@ -4,8 +4,8 @@ import './globals.css';
 
 import 'react-notion-x/src/styles.css';
 import { AlertContextProvider } from '@/components/commons/AlertContextProvider';
-import Header from '@/components/shared/Header';
 import { ReduxProvider } from '@/components/commons/ReduxProvider';
+import Header from '@/components/shared/header';
 
 const logoFont = localFont({
   src: './fonts/런드리고딕 Regular.woff2',
