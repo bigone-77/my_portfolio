@@ -118,14 +118,14 @@ export default function HomeDiv() {
       >
         <Link
           href='/main'
-          className='underline underline-offset-8 hover:opacity-80 cursor-pointer transition-all text-white'
+          className='underline underline-offset-8 hover:opacity-80 cursor-pointer transition-all text-white text-lg'
         >
-          👉제가 더 궁금하신가요?
+          👉About Me
         </Link>
       </motion.div>
 
       {/* Add more content to make the page scrollable */}
-      <div className='h-80'></div>
+      <div className='h-60'></div>
     </div>
   );
 }

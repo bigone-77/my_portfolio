@@ -18,7 +18,6 @@ import SideEmail from '@/components/shared/SideEmail';
 import AboutDiv from '@/components/main/about';
 import SkillDiv from '@/components/main/skills';
 import ProjectDiv from '@/components/main/projects';
-import ExperienceDiv from '@/components/main/experience';
 
 export default function MainView() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
@@ -60,9 +59,6 @@ export default function MainView() {
           </SwiperSlide>
           <SwiperSlide>
             <ProjectDiv />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ExperienceDiv />
           </SwiperSlide>
         </Swiper>
         <SideSocial />

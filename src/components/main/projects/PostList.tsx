@@ -33,7 +33,7 @@ export default function PostList() {
         {Projects.map((project, index) => (
           <SwiperSlide key={index} className='flex items-center justify-center'>
             {/* 부모 컨테이너에 고정된 높이 적용 */}
-            <div className='w-full h-[550px] rounded-lg p-4 md:p-10 bg-slate-200 flex-shrink-0 flex flex-col'>
+            <div className='w-full h-[500px] rounded-lg p-6 md:p-10 flex-shrink-0 flex flex-col border'>
               <p className='text-xs md:text-sm text-slate-900 font-medium py-2'>
                 {project.history}
               </p>
@@ -56,18 +56,18 @@ export default function PostList() {
                     <li key={index}>{l}</li>
                   ))}
                 </ul>
-                {project.url && (
+                {/* {project.url && (
                   <Link
                     href={project.url}
                     className='border-l-4 border-l-blue-400 pl-2 text-blue-400 hover:opacity-60 transition-all'
                   >
                     {project.url}
                   </Link>
-                )}
-                <section className='w-full rounded-lg border border-[#7E60BF] bg-[#E4B1F0] p-[2px] md:p-2'>
+                )} */}
+                <section className='w-full rounded-lg border border-[#FAF7F0] bg-[#FAF7F0] p-2'>
                   {project.stacks.map((stack, index) => (
                     <Badge
-                      className='bg-gray-300 text-[#EB5757] m-[2px]'
+                      className='bg-[#D8D2C2] text-[#EB5757] m-[2px]'
                       key={index}
                     >
                       {stack}

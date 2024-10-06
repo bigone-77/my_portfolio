@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 interface ToggleButtonProps {
   isOpen: boolean;
@@ -11,11 +12,13 @@ export default function ToggleButton({
   isOpen,
   toggleHandler,
 }: ToggleButtonProps) {
+  const pathname = usePathname();
+
   return (
     <div className='block md:hidden'>
       <button
         onClick={toggleHandler}
-        className='relative w-10 h-10 flex justify-center items-center bg-white rounded-full shadow-lg'
+        className={`${pathname === '/' && 'hidden'} relative w-10 h-10 flex justify-center items-center bg-white rounded-full shadow-lg`}
       >
         <AnimatePresence mode='wait' initial={false}>
           {isOpen ? (
