@@ -1,14 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { motion } from 'framer-motion';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
+import { slideTo } from '@/store/features/swiperReducer';
 
 import SideSocial from '@/components/shared/SideSocial';
 import SideEmail from '@/components/shared/SideEmail';
@@ -20,13 +22,17 @@ import ExperienceDiv from '@/components/main/experience';
 
 export default function MainView() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const navigateToSlide = (index: number) => {
+  const selectedIndex = useAppSelector(
+    (state) => state.swiperReducer.selectedIndex,
+  );
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
     if (swiperInstance) {
-      swiperInstance.slideTo(index);
+      swiperInstance.slideTo(selectedIndex);
     }
-  };
+  }, [selectedIndex, swiperInstance]);
 
   return (
     <motion.div
@@ -45,7 +51,7 @@ export default function MainView() {
           }}
           modules={[Mousewheel, Pagination]}
           onSwiper={(swiper) => setSwiperInstance(swiper)}
-          onSlideChange={(swiper) => setSelectedIndex(swiper.activeIndex)}
+          onSlideChange={(swiper) => dispatch(slideTo(swiper.activeIndex))}
           className='w-full h-screen'
         >
           <SwiperSlide>

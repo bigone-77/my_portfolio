@@ -5,7 +5,16 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image, { StaticImageData } from 'next/image';
 
-export default function FlipCard({ images }: { images: StaticImageData[] }) {
+type ImageData = {
+  imgSrc: StaticImageData;
+  description: string;
+};
+
+interface IFlipCardProps {
+  images: ImageData[];
+}
+
+export default function FlipCard({ images }: IFlipCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
@@ -51,9 +60,27 @@ export default function FlipCard({ images }: { images: StaticImageData[] }) {
             backfaceVisibility: 'hidden',
           }}
         >
-          <CardContent className='grid grid-cols-2 place-items-center'>
-            <Image src={images[0]} alt='0번째 이미지' />
-            <Image src={images[1]} alt='1번째 이미지' />
+          <CardContent className='grid grid-cols-2 place-items-center w-full max-h-full'>
+            {images.map((image, index) => (
+              <div
+                key={`image ${index}`}
+                className='flex flex-col items-center gap-y-2 text-center'
+              >
+                <Image
+                  src={image.imgSrc}
+                  alt={`image ${index}`}
+                  className='rounded-xl object-cover'
+                  style={{
+                    maxWidth: '100%', // 부모 컨테이너 너비에 맞춤
+                    maxHeight: '150px', // 최대 높이 제한
+                    objectFit: 'contain', // 이미지 비율 유지
+                  }}
+                />
+                <p className='text-xs font-medium font-logo'>
+                  {image.description}
+                </p>
+              </div>
+            ))}
           </CardContent>
         </Card>
       </motion.div>

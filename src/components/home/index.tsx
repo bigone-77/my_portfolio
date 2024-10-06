@@ -97,7 +97,12 @@ export default function HomeDiv() {
             </ul>
           </CardContent>
         </Card>
-        <FlipCard images={[SWSrc, PCCPSrc]} />
+        <FlipCard
+          images={[
+            { imgSrc: SWSrc, description: '서경SW 헥토 금상' },
+            { imgSrc: PCCPSrc, description: 'PCCP 대비 교육 수료증' },
+          ]}
+        />
       </motion.div>
 
       {/* 스크롤하면 나타나는 텍스트 추가 */}
