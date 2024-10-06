@@ -1,8 +1,13 @@
 'use client';
 
+import { NavMenu } from '@/data/NavMenu';
+import { slideTo } from '@/store/features/swiperReducer';
+import { useAppDispatch } from '@/store/hooks';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function FullColMenu({ isOpen }: { isOpen: boolean }) {
+  const dispatch = useAppDispatch();
+
   return (
     <AnimatePresence mode='sync'>
       {isOpen && ( // 조건부 렌더링을 통해 `AnimatePresence`가 exit 애니메이션을 감지하게 함
@@ -14,10 +19,15 @@ export default function FullColMenu({ isOpen }: { isOpen: boolean }) {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
           <ul className='space-y-8 text-2xl font-semibold'>
-            <li className='cursor-pointer'>Home</li>
-            <li className='cursor-pointer'>About</li>
-            <li className='cursor-pointer'>Projects</li>
-            <li className='cursor-pointer'>Contact</li>
+            {NavMenu.map((menu, index) => (
+              <li
+                key={index}
+                onClick={() => dispatch(slideTo(index))}
+                className='cursor-pointer'
+              >
+                {menu}
+              </li>
+            ))}
           </ul>
         </motion.div>
       )}
