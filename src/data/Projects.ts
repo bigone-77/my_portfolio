@@ -92,7 +92,11 @@ export const ProjectsData: Project[] = [
     unit: 'SOLO',
     memberNum: 1,
     description: 'Notion, Github API를 활용한 개인 포트폴리오',
-    list: ['Swiper를 활용하여 FullPage로 구성', 'Shadcn/ui 공통 컴포넌트 활용', '모바일, 데스크톱 반응형으로 구현'],
+    list: [
+      'Swiper를 활용하여 FullPage로 구성',
+      'Shadcn/ui 공통 컴포넌트 활용',
+      '모바일, 데스크톱 반응형으로 구현',
+    ],
     url: 'https://portfolio-cyan-eight-79.vercel.app/',
     stacks: [
       'Next.js',

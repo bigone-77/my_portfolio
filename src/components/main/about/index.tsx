@@ -13,7 +13,7 @@ import {
 export default function AboutDiv() {
   return (
     <Top>
-      <div className="max-w-5xl mx-auto px-4"> {/* 최대 너비와 중앙 정렬 */}
+      <div className='max-w-5xl mx-auto px-4'>
         <p className='text-center font-bold font-logo mb-6 text-3xl md:text-4xl text-blue-600'>
           1. About
         </p>
@@ -39,7 +39,9 @@ export default function AboutDiv() {
               <CardHeader>
                 <CardTitle className='font-logo text-xl md:text-2xl'>
                   <span className='flex'>
-                    내가 <p className='font-bold text-blue-600 ml-1'>프론트엔드</p>를 선택한 이유
+                    내가{' '}
+                    <p className='font-bold text-blue-600 ml-1'>프론트엔드</p>를
+                    선택한 이유
                   </span>
                 </CardTitle>
                 <CardDescription className='line-through'>
@@ -48,7 +50,10 @@ export default function AboutDiv() {
               </CardHeader>
               <CardContent>
                 <p className='text-sm md:text-base break-words'>
-                  UI를 통해 사용자와 직접 소통하며 그들의 피드백을 반영하는 과정이 저에게 큰 동기부여가 되었습니다. 프론트엔드 개발은 단순한 기능 구현을 넘어 사용자와의 끊임없는 소통을 통해 발전해 나가는 분야라는 점에서 매력을 느끼고 계속 빠져드는중입니다!
+                  UI를 통해 사용자와 직접 소통하며 그들의 피드백을 반영하는
+                  과정이 저에게 큰 동기부여가 되었습니다. 프론트엔드 개발은
+                  단순한 기능 구현을 넘어 사용자와의 끊임없는 소통을 통해 발전해
+                  나가는 분야라는 점에서 매력을 느끼고 계속 빠져드는중입니다!
                 </p>
               </CardContent>
             </Card>
@@ -63,7 +68,10 @@ export default function AboutDiv() {
               </CardHeader>
               <CardContent>
                 <p className='text-sm md:text-base break-words'>
-                  같은 분야든 다른 분야든 가장 중요한 것은 <span className='font-bold text-blue-600'>소통</span>이라고 생각합니다. 서로의 의견을 공유하고 취합해야 정해진 시간 안에 만족스러운 결과물로 이어지기 때문입니다.
+                  같은 분야든 다른 분야든 가장 중요한 것은{' '}
+                  <span className='font-bold text-blue-600'>소통</span>이라고
+                  생각합니다. 서로의 의견을 공유하고 취합해야 정해진 시간 안에
+                  만족스러운 결과물로 이어지기 때문입니다.
                 </p>
               </CardContent>
             </Card>

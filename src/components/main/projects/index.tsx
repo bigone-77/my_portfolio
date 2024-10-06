@@ -11,7 +11,7 @@ export default function ProjectDiv() {
       </p>
       <PostList />
       <div className='md:pt-10'>
-      <Footer />
+        <Footer />
       </div>
     </Top>
   );
