@@ -1,5 +1,7 @@
 import Image from 'next/image';
+
 import ProfileImage from '@/../public/profile.jpg';
+
 import Top from '@/components/shared/Top';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -13,26 +15,28 @@ import {
 export default function AboutDiv() {
   return (
     <Top>
-      <div className='max-w-5xl mx-auto px-4'>
+      <div className='max-w-5xl mx-auto px-4 h-full'>
         <p className='text-center font-bold font-logo mb-6 text-3xl md:text-4xl text-blue-600'>
           1. About
         </p>
         <section className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          <div className='col-span-1 place-items-start'>
+          <div className='md:col-span-1 place-items-start flex md:flex-col items-center justify-between gap-2'>
             <Image
               src={ProfileImage}
               alt='profile'
               width={200}
               height={300}
               priority
-              className='rounded-lg'
+              className='rounded-lg w-32 h-40 md:w-[200px] md:h-[300px]'
             />
-            <p className='my-4 font-bold text-2xl md:text-3xl'>신태일</p>
-            {['긍정적', '침착함', '자신감'].map((keyword, index) => (
-              <Badge className='bg-blue-600 mr-2' key={index}>
-                {keyword}
-              </Badge>
-            ))}
+            <div>
+              <p className='my-4 font-bold text-2xl md:text-3xl'>신태일</p>
+              {['긍정적', '침착함', '자신감'].map((keyword, index) => (
+                <Badge className='bg-blue-600 mr-2' key={index}>
+                  {keyword}
+                </Badge>
+              ))}
+            </div>
           </div>
           <div className='col-span-2'>
             <Card className='w-full cursor-pointer hover:scale-105 transition-all break-words'>

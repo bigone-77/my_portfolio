@@ -45,32 +45,32 @@ export default function Header() {
           Bigone&apos;s Portfolio
         </p>
       </Link>
-      <ul
-        className={`${pathname === '/' && 'hidden'} hidden md:flex items-center justify-center font-medium gap-x-8 text-xl cursor-pointer`}
-      >
-        {NavMenu.map((route, index) => (
-          <li
-            key={index}
-            className={`relative hover:text-blue-600 transition-all cursor-pointer
+      {pathname === '/main' && (
+        <ul className='hidden md:flex items-center justify-center font-medium gap-x-8 text-xl cursor-pointer'>
+          {NavMenu.map((route, index) => (
+            <li
+              key={index}
+              className={`relative hover:text-blue-600 transition-all cursor-pointer
               ${
                 selectedIndex === index && pathname === '/main'
                   ? 'text-blue-600'
                   : 'text-gray-600'
               }
             `}
-            onClick={() => listClickHandler(index)}
-          >
-            {route}
-            <span
-              className={`absolute left-0 right-0 bottom-[-2px] h-[2px] bg-blue-600 transition-transform duration-300 ${
-                selectedIndex === index && pathname === '/main'
-                  ? 'scale-x-100'
-                  : 'scale-x-0'
-              }`}
-            />
-          </li>
-        ))}
-      </ul>
+              onClick={() => listClickHandler(index)}
+            >
+              {route}
+              <span
+                className={`absolute left-0 right-0 bottom-[-2px] h-[2px] bg-blue-600 transition-transform duration-300 ${
+                  selectedIndex === index && pathname === '/main'
+                    ? 'scale-x-100'
+                    : 'scale-x-0'
+                }`}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
       {/* 햄버거 메뉴 버튼 */}
       <ToggleButton isOpen={isOpen} toggleHandler={toggleMenuHandler} />
     </header>

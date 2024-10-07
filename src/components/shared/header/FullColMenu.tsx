@@ -2,11 +2,17 @@
 
 import { NavMenu } from '@/data/NavMenu';
 import { slideTo } from '@/store/features/swiperReducer';
+import { toggleOpen } from '@/store/features/toggleMenuReducer';
 import { useAppDispatch } from '@/store/hooks';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function FullColMenu({ isOpen }: { isOpen: boolean }) {
   const dispatch = useAppDispatch();
+
+  const toggleHandler = (index: number) => {
+    dispatch(slideTo(index));
+    dispatch(toggleOpen(!isOpen));
+  };
 
   return (
     <AnimatePresence mode='sync'>
@@ -22,7 +28,7 @@ export default function FullColMenu({ isOpen }: { isOpen: boolean }) {
             {NavMenu.map((menu, index) => (
               <li
                 key={index}
-                onClick={() => dispatch(slideTo(index))}
+                onClick={() => toggleHandler(index)}
                 className='cursor-pointer'
               >
                 {menu}

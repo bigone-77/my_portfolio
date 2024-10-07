@@ -9,7 +9,15 @@ type Props = {
 
 const notion = new NotionAPI();
 
-export default async function NotionPage({ params: { pageId } }: Props) {
+export default async function NotionPage({
+  params,
+}: Props): Promise<JSX.Element> {
+  const { pageId } = params;
+
+  if (!pageId) {
+    return <div>Error: Invalid page ID</div>;
+  }
+
   const recordMap = await notion.getPage(pageId);
   return (
     <Dimmed goBack>

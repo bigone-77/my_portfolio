@@ -11,6 +11,7 @@ import FlipCard from '@/components/home/FlipCard';
 
 import SWSrc from '@awards/sw.png';
 import PCCPSrc from '@awards/pccp.png';
+import LionSrc from '@awards/LionSrc.jpg';
 
 export default function HomeDiv() {
   const controls = useAnimation();
@@ -101,6 +102,7 @@ export default function HomeDiv() {
           images={[
             { imgSrc: SWSrc, description: '서경SW 헥토 금상' },
             { imgSrc: PCCPSrc, description: 'PCCP 대비 교육 수료증' },
+            { imgSrc: LionSrc, description: '멋쟁이사자 해커톤 우수상' },
           ]}
         />
       </motion.div>

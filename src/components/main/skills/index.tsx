@@ -7,13 +7,13 @@ import HoverCard from '@/components/main/skills/HoverCard';
 
 export default function SkillDiv() {
   return (
-    <Top bgColor='#FFF5CD' textColor='#E78F81'>
+    <Top>
       <p className='text-start font-bold font-logo mb-6 text-3xl text-zinc-600'>
         2. Skills
       </p>
       <div className='grid grid-cols-2 gap-4'>
         <section className='flex flex-col gap-2'>
-          <Card className='p-4'>
+          <Card className='p-4 bg-[#FFF5CD]'>
             <CardTitle className='mb-2 text-sm md:text-base font-logo'>
               {Skills[0].name}
             </CardTitle>
@@ -30,7 +30,7 @@ export default function SkillDiv() {
               ))}
             </CardContent>
           </Card>
-          <Card className='p-4'>
+          <Card className='p-4 bg-[#FFF5CD]'>
             <CardTitle className='mb-2 text-sm md:text-base font-logo'>
               {Skills[2].name}
             </CardTitle>
@@ -49,7 +49,7 @@ export default function SkillDiv() {
           </Card>
         </section>
         <section className='flex flex-col gap-2'>
-          <Card className='p-4'>
+          <Card className='p-4 bg-[#FFF5CD]'>
             <CardTitle className='mb-2 font-logo text-sm md:text-base'>
               {Skills[1].name}
             </CardTitle>
@@ -66,7 +66,7 @@ export default function SkillDiv() {
               ))}
             </CardContent>
           </Card>
-          <Card className='p-4'>
+          <Card className='p-4 bg-[#FFF5CD]'>
             <CardTitle className='mb-2 font-logo text-sm md:text-base'>
               {Skills[3].name}
             </CardTitle>
