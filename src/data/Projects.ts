@@ -56,7 +56,7 @@ export const ProjectsData: Project[] = [
       '@tanstack/react-query',
       'ChartJs',
     ],
-    notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
+    // notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
     repoName: 'livfit-fe',
   },
   {
@@ -83,7 +83,7 @@ export const ProjectsData: Project[] = [
       'React-Hook-Form',
     ],
     notionId: '116ba946abd8800da02dd94fa13195b1',
-    repoName: 'freeload-fe',
+    repoName: 'olleh_front',
   },
   {
     history: '💻 개인 포트폴리오',
@@ -106,7 +106,7 @@ export const ProjectsData: Project[] = [
       'Framer-motion',
       'Swiper',
     ],
-    notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
+    // notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
     repoName: 'my-portfolio',
   },
 ];
