@@ -36,7 +36,7 @@ export default function FlipCard({ images }: IFlipCardProps) {
       >
         {/* Front of the card */}
         <Card
-          className='absolute w-full h-full bg-blue-500 text-white rounded-lg'
+          className='absolute w-full h-full bg-[#ECDFCC] rounded-lg'
           style={{ backfaceVisibility: 'hidden' }}
         >
           <CardHeader>
@@ -48,6 +48,7 @@ export default function FlipCard({ images }: IFlipCardProps) {
             <ul className='list-disc pl-3 text-xs md:text-sm space-y-2'>
               <li>서경SW 아카데미 헥토 금상</li>
               <li>PCCP 대비 교육 이수 수료증</li>
+              <li>멋쟁이 사자 해커톤 우수상</li>
             </ul>
           </CardContent>
         </Card>
@@ -60,7 +61,7 @@ export default function FlipCard({ images }: IFlipCardProps) {
             backfaceVisibility: 'hidden',
           }}
         >
-          <CardContent className='grid grid-cols-2 place-items-center w-full max-h-full'>
+          <CardContent className='grid grid-cols-3 gap-4 place-items-center w-full max-h-full'>
             {images.map((image, index) => (
               <div
                 key={`image ${index}`}
@@ -71,8 +72,8 @@ export default function FlipCard({ images }: IFlipCardProps) {
                   alt={`image ${index}`}
                   className='rounded-xl object-cover'
                   style={{
-                    maxWidth: '100%', // 부모 컨테이너 너비에 맞춤
-                    maxHeight: '150px', // 최대 높이 제한
+                    width: '100px', // 이미지 너비를 고정
+                    height: '100px', // 이미지 높이를 고정
                     objectFit: 'contain', // 이미지 비율 유지
                   }}
                 />

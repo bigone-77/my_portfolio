@@ -67,7 +67,7 @@ export default function HomeDiv() {
         initial='hidden'
         transition={{ ease: 'backOut', duration: 1.2 }}
       >
-        <Card className='w-full cursor-pointer hover:scale-95 transition-all'>
+        <Card className='w-full cursor-pointer hover:scale-95 transition-all bg-[#ECDFCC]'>
           <CardHeader>
             <CardTitle className='font-logo text-lg md:text-xl'>
               ⏳ 저는 이런 활동들을 했어요
@@ -127,7 +127,7 @@ export default function HomeDiv() {
       </motion.div>
 
       {/* Add more content to make the page scrollable */}
-      <div className='h-60'></div>
+      <div className='h-40'></div>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import 'react-notion-x/src/styles.css';
 import { AlertContextProvider } from '@/components/commons/AlertContextProvider';
 import { ReduxProvider } from '@/components/commons/ReduxProvider';
 import Header from '@/components/shared/header';
+import Footer from '@/components/shared/Footer';
 
 const logoFont = localFont({
   src: './fonts/런드리고딕 Regular.woff2',
@@ -43,6 +44,7 @@ export default function RootLayout({
             <Header />
             {children}
             {modal}
+
             <div id='root-portal' />
           </AlertContextProvider>
         </ReduxProvider>

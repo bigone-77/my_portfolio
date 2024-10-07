@@ -22,7 +22,7 @@ export default function PostList() {
         modules={[Navigation]}
         spaceBetween={30}
         slidesPerView={1}
-        loop={true}
+        // loop={true}
         breakpoints={{
           780: {
             slidesPerView: 2,

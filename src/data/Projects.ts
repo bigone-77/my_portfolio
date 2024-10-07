@@ -56,7 +56,7 @@ export const ProjectsData: Project[] = [
       '@tanstack/react-query',
       'ChartJs',
     ],
-    notionId: 'LivFit-116ba946abd8806f80f0ce6f7c3c80dd',
+    notionId: '118ba946abd8800c8d38c411b53e4f5a',
     repoName: 'livfit-fe',
   },
   {
@@ -106,7 +106,7 @@ export const ProjectsData: Project[] = [
       'Framer-motion',
       'Swiper',
     ],
-    notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
+    notionId: '118ba946abd88041a53aef7d47239ce3',
     repoName: 'my-portfolio',
   },
 ];

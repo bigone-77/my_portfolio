@@ -8,7 +8,7 @@ import HoverCard from '@/components/main/skills/HoverCard';
 export default function SkillDiv() {
   return (
     <Top>
-      <p className='text-start font-bold font-logo mb-6 text-3xl text-zinc-600'>
+      <p className='text-start font-bold font-logo mb-6 text-3xl text-blue-600'>
         2. Skills
       </p>
       <div className='grid grid-cols-2 gap-4'>
