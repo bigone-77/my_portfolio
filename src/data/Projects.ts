@@ -28,7 +28,7 @@ export const ProjectsData: Project[] = [
       'Firebase',
       'ChartJs',
     ],
-    notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
+    notionId: '9c7d454d03684f7bb6c757efc3d681dd',
     repoName: 'freeload-fe',
   },
   {
@@ -56,7 +56,7 @@ export const ProjectsData: Project[] = [
       '@tanstack/react-query',
       'ChartJs',
     ],
-    // notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
+    notionId: 'LivFit-116ba946abd8806f80f0ce6f7c3c80dd',
     repoName: 'livfit-fe',
   },
   {
@@ -106,7 +106,7 @@ export const ProjectsData: Project[] = [
       'Framer-motion',
       'Swiper',
     ],
-    // notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
+    notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
     repoName: 'my-portfolio',
   },
 ];

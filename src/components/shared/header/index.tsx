@@ -45,7 +45,9 @@ export default function Header() {
           Bigone&apos;s Portfolio
         </p>
       </Link>
-      <ul className='hidden md:flex items-center justify-center font-medium gap-x-8 text-xl cursor-pointer'>
+      <ul
+        className={`${pathname === '/' && 'hidden'} hidden md:flex items-center justify-center font-medium gap-x-8 text-xl cursor-pointer`}
+      >
         {NavMenu.map((route, index) => (
           <li
             key={index}
