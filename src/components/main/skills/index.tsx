@@ -85,6 +85,4 @@ export default function SkillDiv() {
           </Card>
         </section>
       </div>
-    </Top>
-  );
-}
+    

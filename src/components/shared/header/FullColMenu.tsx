@@ -29,14 +29,4 @@ export default function FullColMenu({ isOpen }: { isOpen: boolean }) {
               <li
                 key={index}
                 onClick={() => toggleHandler(index)}
-                className='cursor-pointer'
-              >
-                {menu}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-}
+                cl

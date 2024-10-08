@@ -82,4 +82,6 @@ export default function AboutDiv() {
           </div>
         </section>
       </div>
-    
+    </Top>
+  );
+}

@@ -83,8 +83,4 @@ export default function FlipCard({ images }: IFlipCardProps) {
               </div>
             ))}
           </CardContent>
-        </Card>
-      </motion.div>
-    </div>
-  );
-}
+       
