@@ -2,6 +2,7 @@
 
 import MainView from '@/components/main';
 import FullColMenu from '@/components/shared/header/FullColMenu';
+
 import { useAppSelector } from '@/store/hooks';
 
 export default function MainPage() {

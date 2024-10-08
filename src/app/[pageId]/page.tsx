@@ -21,4 +21,9 @@ export default async function NotionPage({
   const recordMap = await notion.getPage(pageId);
   return (
     <Dimmed goBack>
-      <div className='w-full max-w-[calc(100vw-40px)] mx-auto absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-6 box-border ma
+      <div className='w-full max-w-[calc(100vw-40px)] mx-auto absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg p-6 box-border max-h-[80vh] overflow-y-auto'>
+        <NotionContent recordMap={recordMap} />
+      </div>
+    </Dimmed>
+  );
+}
