@@ -33,7 +33,7 @@ export default function PostList() {
         {Projects.map((project, index) => (
           <SwiperSlide key={index} className='flex items-center justify-center'>
             {/* 부모 컨테이너에 고정된 높이 적용 */}
-            <div className='w-full h-[550px] sm: rounded-lg p-6 md:p-10 flex-shrink-0 flex flex-col border'>
+            <div className='w-full h-[500px] sm: rounded-lg p-6 md:p-10 flex-shrink-0 flex flex-col border'>
               <p className='text-xs md:text-sm text-slate-900 font-medium py-2'>
                 {project.history}
               </p>

@@ -36,34 +36,33 @@ export default function MainView() {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ ease: 'easeInOut', duration: 0.75 }}
+      className='w-full flex-1'
     >
-      <main className='relative w-full h-full'>
-        <Swiper
-          direction='vertical'
-          slidesPerView={1}
-          mousewheel={true}
-          speed={1000}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Mousewheel, Pagination]}
-          onSwiper={(swiper) => setSwiperInstance(swiper)}
-          onSlideChange={(swiper) => dispatch(slideTo(swiper.activeIndex))}
-          className='w-full h-screen'
-        >
-          <SwiperSlide>
-            <AboutDiv />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SkillDiv />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectDiv />
-          </SwiperSlide>
-        </Swiper>
-        <SideSocial />
-        <SideEmail />
-      </main>
+      <Swiper
+        direction='vertical'
+        slidesPerView={1}
+        mousewheel={true}
+        speed={1000}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Mousewheel, Pagination]}
+        onSwiper={(swiper) => setSwiperInstance(swiper)}
+        onSlideChange={(swiper) => dispatch(slideTo(swiper.activeIndex))}
+        className='h-full mt-[80px] px-7 sm:px-16'
+      >
+        <SwiperSlide className='bg-blue-400 grid grid-cols-1 place-items-center'>
+          <AboutDiv />
+        </SwiperSlide>
+        <SwiperSlide className='bg-red-400 grid grid-cols-1 place-items-center'>
+          <SkillDiv />
+        </SwiperSlide>
+        <SwiperSlide className='bg-yellow-400 grid grid-cols-1 place-items-center'>
+          <ProjectDiv />
+        </SwiperSlide>
+      </Swiper>
+      <SideSocial />
+      <SideEmail />
     </motion.div>
   );
 }

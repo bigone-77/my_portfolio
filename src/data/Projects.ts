@@ -28,7 +28,7 @@ export const ProjectsData: Project[] = [
       'Firebase',
       'ChartJs',
     ],
-    notionId: '9c7d454d03684f7bb6c757efc3d681dd',
+    notionId: '116ba946abd8806f80f0ce6f7c3c80dd',
     repoName: 'freeload-fe',
   },
   {

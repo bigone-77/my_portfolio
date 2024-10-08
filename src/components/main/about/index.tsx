@@ -15,8 +15,8 @@ import {
 export default function AboutDiv() {
   return (
     <Top>
-      <div className='max-w-5xl mx-auto px-4 h-full'>
-        <p className='text-center font-bold font-logo mb-6 text-3xl md:text-4xl text-blue-600'>
+      <div className='max-w-5xl mx-auto flex-wrap flex flex-col px-4 h-full'>
+        <p className='text-center font-bold font-logo text-3xl md:text-4xl text-blue-600'>
           1. About
         </p>
         <section className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -82,6 +82,4 @@ export default function AboutDiv() {
           </div>
         </section>
       </div>
-    </Top>
-  );
-}
+    

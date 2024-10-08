@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body
-        className={`${pretendard.variable} ${logoFont.variable} font-pretendard m-0 h-full w-screen`}
+        className={`${pretendard.variable} ${logoFont.variable} font-pretendard m-0 h-lvh w-screen flex`}
       >
         <ReduxProvider>
           <AlertContextProvider>

@@ -48,7 +48,7 @@ export default function HomeDiv() {
   }, [controls, textControls]);
 
   return (
-    <div className='relative w-full h-full'>
+    <div className='relative w-screen h-full flex flex-col items-center'>
       <div className='fixed inset-0 bg-profileBackgroundImage bg-cover bg-no-repeat bg-center w-full h-full before:content-[""] before:absolute before:inset-0 before:bg-black/50' />
 
       <div className='relative w-full min-h-screen flex flex-col items-center justify-center'>
@@ -58,11 +58,11 @@ export default function HomeDiv() {
       </div>
 
       <motion.div
-        className='flex flex-col md:grid md:grid-cols-2 mx-16 sm:mx-24 items-center md:items-start justify-between gap-12 md:gap-20 h-full'
+        className='flex flex-col md:grid md:grid-cols-2 mx-16 sm:mx-24 items-center justify-between gap-4 md:gap-20 h-full'
         animate={controls}
         variants={{
           hidden: { opacity: 0, y: '50%' },
-          visible: { opacity: 1, y: '0%' },
+          visible: { opacity: 1, y: '0' },
         }}
         initial='hidden'
         transition={{ ease: 'backOut', duration: 1.2 }}
@@ -105,29 +105,14 @@ export default function HomeDiv() {
             { imgSrc: LionSrc, description: '멋쟁이사자 해커톤 우수상' },
           ]}
         />
-      </motion.div>
-
-      {/* 스크롤하면 나타나는 텍스트 추가 */}
-      <motion.div
-        className='mt-10 sm:mt-16 text-center text-lg md:text-xl'
-        animate={textControls}
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial='hidden'
-        transition={{ ease: 'easeOut', duration: 2 }}
-      >
         <Link
           href='/main'
-          className='underline underline-offset-8 hover:opacity-80 cursor-pointer transition-all text-white text-lg'
+          className='col-span-2 underline underline-offset-8 hover:opacity-80 cursor-pointer transition-all text-white text-lg text-center'
         >
           👉About Me
         </Link>
+        <div className='h-20'></div>
       </motion.div>
-
-      {/* Add more content to make the page scrollable */}
-      <div className='h-40'></div>
     </div>
   );
 }

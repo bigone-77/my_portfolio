@@ -6,12 +6,7 @@ interface ITopProps {
 
 export default function Top({ children }: ITopProps) {
   return (
-    <div
-      className='w-full md:h-lvh flex flex-col items-center justify-center px-4 sm:px-10 md:px-32 pt-4 sm:pt-20 pb-28'
-      style={{
-        height: 'calc(100vh - 140px)',
-      }}
-    >
+    <div className='w-full h-screen grid grid-cols-1 place-items-center mt-[10%] px-10 sm:px-20'>
       {children}
     </div>
   );
