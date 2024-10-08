@@ -107,6 +107,6 @@ export const ProjectsData: Project[] = [
       'Swiper',
     ],
     notionId: '118ba946abd88041a53aef7d47239ce3',
-    repoName: 'my-portfolio',
+    repoName: 'my_portfolio',
   },
 ];
