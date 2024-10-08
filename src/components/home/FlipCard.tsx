@@ -55,7 +55,7 @@ export default function FlipCard({ images }: IFlipCardProps) {
 
         {/* Back of the card */}
         <Card
-          className='absolute w-full h-full flex justify-center items-center rounded-lg'
+          className='bg-[#ECDFCC] absolute w-full h-full flex justify-center items-center rounded-lg'
           style={{
             transform: 'rotateY(180deg)',
             backfaceVisibility: 'hidden',

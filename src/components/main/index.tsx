@@ -51,13 +51,13 @@ export default function MainView() {
         onSlideChange={(swiper) => dispatch(slideTo(swiper.activeIndex))}
         className='h-full mt-[80px] px-7 sm:px-16'
       >
-        <SwiperSlide className='bg-blue-400 grid grid-cols-1 place-items-center'>
+        <SwiperSlide className='grid grid-cols-1 place-items-center'>
           <AboutDiv />
         </SwiperSlide>
-        <SwiperSlide className='bg-red-400 grid grid-cols-1 place-items-center'>
+        <SwiperSlide className='grid grid-cols-1 place-items-center'>
           <SkillDiv />
         </SwiperSlide>
-        <SwiperSlide className='bg-yellow-400 grid grid-cols-1 place-items-center'>
+        <SwiperSlide className='grid grid-cols-1 place-items-center'>
           <ProjectDiv />
         </SwiperSlide>
       </Swiper>

@@ -28,7 +28,7 @@ export default function HoverText({
 
   return (
     <HoverCard key={name}>
-      <div className='relative'>
+      <div className='relative w-full'>
         {isHovered && (
           <p className='font-logo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none whitespace-nowrap text-center'>
             {familier}
@@ -48,7 +48,7 @@ export default function HoverText({
             alt='alt-image'
             width={40}
             height={40}
-            className='w-6 h-6 sm:w-10 sm:h-10'
+            className='w-4 h-4 sm:w-8 sm:h-8'
           />
           <p className='text-xs sm:text-sm text-center font-medium'>{name}</p>
         </HoverCardTrigger>
