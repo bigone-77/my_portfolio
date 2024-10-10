@@ -33,7 +33,7 @@ export default function GitMarkdown({ repoName }: { repoName: string }) {
   }
 
   return (
-    <div className='relative w-full'>
+    <div className='relative w-full grid grid-cols-1 place-items-center'>
       {/* 닫기버튼: 최상위 요소에 배치 */}
       <svg
         width='15'

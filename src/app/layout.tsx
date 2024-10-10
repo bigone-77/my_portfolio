@@ -6,7 +6,6 @@ import 'react-notion-x/src/styles.css';
 import { AlertContextProvider } from '@/components/commons/AlertContextProvider';
 import { ReduxProvider } from '@/components/commons/ReduxProvider';
 import Header from '@/components/shared/header';
-import Footer from '@/components/shared/Footer';
 
 const logoFont = localFont({
   src: './fonts/런드리고딕 Regular.woff2',
@@ -25,6 +24,22 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   title: '신태일 | 프론트엔드 개발자',
   description: '안주하지 않는 개발자, 신태일입니다.',
+  openGraph: {
+    images: [
+      {
+        url: '/profile.jpg',
+        alt: '이미지 설명',
+      },
+    ],
+  },
+  twitter: {
+    images: [
+      {
+        url: '/profile.jpg',
+        alt: '이미지 설명',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -44,7 +59,6 @@ export default function RootLayout({
             <Header />
             {children}
             {modal}
-
             <div id='root-portal' />
           </AlertContextProvider>
         </ReduxProvider>
