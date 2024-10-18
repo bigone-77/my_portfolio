@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
 import Animate from '@/components/home/Animate';
@@ -12,7 +12,7 @@ export default function HomePage() {
         <Image
           src='/bg.webp'
           alt='Background'
-          layout='fill'
+          fill
           className='object-cover'
           priority
         />
