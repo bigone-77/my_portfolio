@@ -1,38 +1,32 @@
 'use client';
 
 import { useEffect } from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
 import { useAnimation, motion } from 'framer-motion';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-
 import Animate from '@/components/home/Animate';
-import FlipCard from '@/components/home/FlipCard';
 
-import SWSrc from '@awards/sw.png';
-import PCCPSrc from '@awards/pccp.png';
-import LionSrc from '@awards/LionSrc.jpg';
+const ScrollSection = dynamic(() => import('@/components/home/ScrollSection'));
 
 export default function HomeDiv() {
   const controls = useAnimation();
-  const textControls = useAnimation(); // 새로운 애니메이션 제어를 위한 useAnimation 추가
+  const textControls = useAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate scroll percentage
       const scrollTop = window.scrollY;
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
 
-      // Check if the scroll percent exceeds a certain threshold
       if (scrollPercent > 20) {
         controls.start('visible');
       } else {
         controls.start('hidden');
       }
 
-      // 추가 텍스트 애니메이션을 위한 스크롤 감지
       if (scrollPercent > 50) {
         textControls.start('visible');
       } else {
@@ -49,10 +43,18 @@ export default function HomeDiv() {
 
   return (
     <div className='relative w-screen h-full flex flex-col items-center'>
-      <div className='fixed inset-0 bg-profileBackgroundImage bg-cover bg-no-repeat bg-center w-full h-full before:content-[""] before:absolute before:inset-0 before:bg-black/50' />
+      <div className='fixed inset-0'>
+        <Image
+          src='/bg.webp'
+          alt='Background'
+          layout='fill'
+          className='object-cover'
+        />
+      </div>
+      <div className='fixed inset-0 bg-black/50' />
 
       <div className='relative w-full min-h-screen flex flex-col items-center justify-center'>
-        <div className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
+        <div className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <Animate />
         </div>
       </div>
@@ -61,57 +63,13 @@ export default function HomeDiv() {
         className='flex flex-col md:grid md:grid-cols-2 mx-16 sm:mx-24 items-center justify-between gap-4 md:gap-20 h-full'
         animate={controls}
         variants={{
-          hidden: { opacity: 0, y: '50%' },
-          visible: { opacity: 1, y: '0' },
+          hidden: { opacity: 0, y: '-50%' },
+          visible: { opacity: 1, y: '0%' },
         }}
         initial='hidden'
         transition={{ ease: 'backOut', duration: 1.2 }}
       >
-        <Card className='w-full cursor-pointer hover:scale-95 transition-all bg-[#ECDFCC]'>
-          <CardHeader>
-            <CardTitle className='font-logo text-lg md:text-xl'>
-              ⏳ 저는 이런 활동들을 했어요
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className='list-disc pl-3 text-xs md:text-sm space-y-2'>
-              <li>
-                서경대학교 소프트웨어학과
-                <br />
-                (19년도 입학 ~ 2025 2월 졸업 예정)
-              </li>
-              <li>
-                UMC 5기 프론트엔드 수료
-                <br />
-                (23.09.12 ~ 24.02.25)
-              </li>
-              <li>
-                서경SW인재양성 교육 수료
-                <br />
-                (24.02.14 ~ 24.06.26)
-              </li>
-              <li>
-                goorm x goormthon UNIV. 3기 프론트엔드
-                <br />
-                (24.07.23 ~)
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-        <FlipCard
-          images={[
-            { imgSrc: SWSrc, description: '서경SW 헥토 금상' },
-            { imgSrc: PCCPSrc, description: 'PCCP 대비 교육 수료증' },
-            { imgSrc: LionSrc, description: '멋쟁이사자 해커톤 우수상' },
-          ]}
-        />
-        <Link
-          href='/main'
-          className='col-span-2 underline underline-offset-8 hover:opacity-80 cursor-pointer transition-all text-white text-lg text-center'
-        >
-          👉About Me
-        </Link>
-        <div className='h-20'></div>
+        <ScrollSection />
       </motion.div>
     </div>
   );

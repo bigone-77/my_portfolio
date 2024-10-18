@@ -39,7 +39,7 @@ export default function Header() {
       <Link href='/'>
         <p
           className={`font-bold text-xl md:text-2xl ${
-            pathname === '/' ? 'text-gray-600' : 'text-blue-600'
+            pathname === '/' ? 'text-white' : 'text-blue-600'
           } font-logo cursor-pointer`}
         >
           Bigone&apos;s Portfolio

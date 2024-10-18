@@ -74,9 +74,6 @@ const config: Config = {
           '100%': { opacity: '1' },
         },
       },
-      backgroundImage: {
-        profileBackgroundImage: 'url("/bg.jpeg")',
-      },
     },
   },
   plugins: [
