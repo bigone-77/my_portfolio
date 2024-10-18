@@ -6,21 +6,13 @@ import Lottie from 'react-lottie-player';
 
 import ArrowJson from '@/../public/down-arrow.json';
 
-import { Button } from '@/components/ui/button';
-
 export default function Animate() {
   const [typeEnd, setTypeEnd] = useState(false);
-  const [key, setKey] = useState(0);
-
-  const handleReplay = () => {
-    setKey((prevKey) => prevKey + 1);
-    setTypeEnd(false);
-  };
 
   return (
     <div className='flex flex-col items-center justify-center text-center gap-2 relative'>
       <TypeAnimation
-        key={key}
+        preRenderFirstString={true}
         deletionSpeed={60}
         wrapper='span'
         sequence={[
