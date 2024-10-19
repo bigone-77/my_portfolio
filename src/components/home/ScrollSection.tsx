@@ -55,7 +55,6 @@ export default function ScrollSection() {
       >
         👉About Me
       </Link>
-      <div className='h-20'></div>
     </>
   );
 }

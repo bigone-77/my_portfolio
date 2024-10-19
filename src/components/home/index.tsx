@@ -39,7 +39,7 @@ export default function ScrollDiv() {
 
   return (
     <motion.div
-      className='flex flex-col md:grid md:grid-cols-2 mx-16 sm:mx-24 items-center justify-between gap-4 md:gap-20 h-full'
+      className='flex flex-col md:grid md:grid-cols-2 mx-16 sm:mx-24 items-center justify-between gap-4 md:gap-20 h-full z-20'
       animate={controls}
       variants={{
         hidden: { opacity: 0, y: '-50%' },
