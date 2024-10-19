@@ -1,15 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
-
-import { useAnimation, motion } from 'framer-motion';
-
-import ScrollSection from '@/components/home/ScrollSection';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { useAnimation, motion } from 'framer-motion';
+import ScrollSection from '@/components/home/ScrollSection';
 
 export default function ScrollDiv() {
   const controls = useAnimation();
-  const textControls = useAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,16 +15,11 @@ export default function ScrollDiv() {
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
 
+      // 조건문을 통합하여 하나의 애니메이션 상태를 관리
       if (scrollPercent > 20) {
         controls.start('visible');
       } else {
         controls.start('hidden');
-      }
-
-      if (scrollPercent > 50) {
-        textControls.start('visible');
-      } else {
-        textControls.start('hidden');
       }
     };
 
@@ -36,7 +28,7 @@ export default function ScrollDiv() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [controls, textControls]);
+  }, [controls]);
 
   return (
     <motion.div
