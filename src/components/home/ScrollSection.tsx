@@ -10,7 +10,7 @@ import LionSrc from '@awards/LionSrc.jpg';
 
 export default function ScrollSection() {
   return (
-    <>
+    <div className='flex flex-col md:grid md:grid-cols-2 items-center justify-between gap-4 md:gap-20'>
       <Card className='w-full cursor-pointer hover:scale-95 transition-all bg-[#ECDFCC]'>
         <CardHeader>
           <CardTitle className='font-logo text-lg md:text-xl'>
@@ -49,12 +49,6 @@ export default function ScrollSection() {
           { imgSrc: LionSrc, description: '멋쟁이사자 해커톤 우수상' },
         ]}
       />
-      <Link
-        href='/main'
-        className='col-span-2 underline underline-offset-8 hover:opacity-80 cursor-pointer transition-all text-white text-lg text-center'
-      >
-        👉About Me
-      </Link>
-    </>
+    </div>
   );
 }

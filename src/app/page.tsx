@@ -19,7 +19,7 @@ export default function HomePage() {
       </div>
       <div className='fixed inset-0 bg-black/50' />
 
-      <div className='relative w-full min-h-screen flex flex-col items-center justify-center'>
+      <div className='relative w-full min-h-full flex flex-col items-center justify-center'>
         <div className='absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <Animate />
         </div>
