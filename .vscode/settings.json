@@ -1,5 +1,13 @@
 {
-  "cSpell.words": ["goorm", "goormthon", "PCCP", "reduxjs", "swiper", "webp"],
+  "cSpell.words": [
+    "goorm",
+    "goormthon",
+    "naver",
+    "PCCP",
+    "reduxjs",
+    "swiper",
+    "webp"
+  ],
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true
