@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -69,6 +70,7 @@ export default function RootLayout({
           </AlertContextProvider>
         </ReduxProvider>
       </body>
+      <GoogleAnalytics gaId={process.env.GA_ID as string} />
     </html>
   );
 }
