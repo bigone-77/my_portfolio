@@ -22,7 +22,7 @@ export default function SideSocial() {
               ></path>
             </svg>
           </Link>
-          <Link href='https://bustling-gondola-823.notion.site/Hello-Tommy-59d8f70567b145298e8aa004ba2f9d6b?pvs=4'>
+          <Link href='https://bustling-gondola-823.notion.site/FrontEnd-Engineer-12cba946abd880108949f0076b6107bc?pvs=4'>
             <svg
               className='w-8 h-8 hover:-translate-y-2 transition-all cursor-pointer'
               width='15'

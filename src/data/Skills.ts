@@ -170,6 +170,7 @@ export const SkillsData: ISkillsProps[] = [
       {
         name: 'Swit',
         imageSrc: SwitSrc,
+        color: '#FFFFFF',
         description:
           '하나의 플랫폼 안에서 팀원들과 커뮤니케이션과 태스크 관리를 수행할 수 있었습니다.',
         familier: '써봤어요',
